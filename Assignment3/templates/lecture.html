@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSCB20 - Lecture</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Connect CSS to HTML -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/content-container.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/lecture.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Define the website title -->
+  <div class="Title">
+    <h1>CSCB20 Introduction to Databases and Web Applications</h1>
+    <h3>Winter 2020</h3>
+  </div>
+
+  <!-- Create a navigation bar -->
+  <div class="nav-bar-container">
+    <div class="Home">
+      <a href="{{ url_for('index') }}">
+        <h3>Home</h3>
+      </a>
+    </div>
+    <div class="Announcement">
+      <a href="{{ url_for('announcement') }}">
+        <h3>Announcement</h3>
+      </a>
+    </div>
+    <div class="Lecture current-page">
+      <a href="{{ url_for('lecture') }}">
+        <h3>Lecture</h3>
+      </a>
+    </div>
+    <div class="Lab">
+      <a href="{{ url_for('lab') }}">
+        <h3>Lab</h3>
+      </a>
+    </div>
+    <div class="Assignment">
+      <a href="{{ url_for('assignment') }}">
+        <h3>Assignment</h3>
+      </a>
+    </div>
+    <div class="Tests">
+      <a href="{{ url_for('tests') }}">
+        <h3>Tests</h3>
+      </a>
+    </div>
+    <div class="Calendar">
+      <a href="{{ url_for('calendar') }}">
+        <h3>Calendar</h3>
+      </a>
+    </div>
+    <div class="Discussion">
+      <a href="{{ url_for('discussion') }}">
+        <h3>Discussion</h3>
+      </a>
+    </div>
+    <div class="Resources">
+      <a href="{{ url_for('resources') }}">
+        <h3>Resources</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <!-- Display the lecture schedule with a table (use grid) -->
+    <div class="lecture-table">
+      <div class="lecture-table-first-row"><b>Week</b></div>
+      <div class="lecture-table-first-row"><b>Topic</b></div>
+      <div class="lecture-table-first-row"><b>Pre Lecture Videos</b></div>
+      <div class="lecture-table-first-row"><b>Lecture Material</b></div>
+      <div>1</div>
+      <div>Introduction / Databases background</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week1.pdf</A></div>
+      <div>2</div>
+      <div>Schema Diagrams / Relational Algebra</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week2.pdf</A></div>
+      <div>3</div>
+      <div>SQL and MySQL</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week3.pdf</A></div>
+      <div>4</div>
+      <div>MySQL Queries / Creating and Editing Tables</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week4.pdf</A></div>
+      <div>5</div>
+      <div>MySQL Outer Joins / Views / NULL / string functions / HTML</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week5.pdf</A></div>
+      <div>6</div>
+      <div>HTML / CSS</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week6.pdf</A></div>
+      <div>7</div>
+      <div>PHP</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week7.pdf</A></div>
+      <div>8</div>
+      <div>PHP and SQL</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week8.pdf</A></div>
+      <div>9</div>
+      <div>JavaScript and jQuery</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week9.pdf</A></div>
+      <div>10</div>
+      <div>jQuery / AJAX / JSON</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week10.pdf</A></div>
+      <div>11</div>
+      <div>jQuery / AJAX / JSON</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week11.pdf</A></div>
+      <div>12</div>
+      <div>Last Year's final</div>
+      <div><A HREF="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank">Link</A></div>
+      <div><A HREF="./static/pdfs/B20Week1.pdf" target="_blank">Week12.pdf</A></div>
+    </div>
+  </div>
+
+  <!-- Copyright information -->
+  <div class="footer">
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">
+      <h3>Faculty of Computer Science at UofT</h3>
+    </a>
+    <h4>Made by Jiyeon Baek and Anika Chang</h4>
+  </div>
+</body>
+
+</html>

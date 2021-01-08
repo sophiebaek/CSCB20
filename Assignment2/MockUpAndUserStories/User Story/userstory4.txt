@@ -1,0 +1,1 @@
+As a student user, when the student clicks into announcements page they should see announcements in order of newest to oldest.

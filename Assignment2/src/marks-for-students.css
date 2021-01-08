@@ -1,0 +1,23 @@
+h2, p{
+    display: inline;
+}
+
+div.mark-table {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: minmax(50px, auto);
+    word-wrap: break-word;
+    width: 50%;
+    /* border: 1px rgb(189, 187, 187) solid; */
+}
+
+div.mark-table>div {
+    background: #eee;
+    padding: 1em;
+    border: 1px rgb(189, 187, 187) solid;
+    text-align: center;
+}
+
+div.mark-table>div.mark-table-first-col {
+    background-color: rgb(219, 219, 219);
+}

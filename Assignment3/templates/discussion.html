@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSCB20 – Discussion</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Connect CSS to HTML -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/content-container.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/discussion.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+
+  <!-- Connect JavaScript to HTML -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts/hide_links.js') }}"></script>
+
+</head>
+
+<body>
+  <!-- Define the website title -->
+  <div class="Title">
+    <h1>CSCB20 Introduction to Databases and Web Applications</h1>
+    <h3>Winter 2020</h3>
+  </div>
+
+  <!-- Create a navigation bar -->
+  <div class="nav-bar-container">
+    <div class="Home">
+      <a href="{{ url_for('index') }}">
+        <h3>Home</h3>
+      </a>
+    </div>
+    <div class="Announcement">
+      <a href="{{ url_for('announcement') }}">
+        <h3>Announcement</h3>
+      </a>
+    </div>
+    <div class="Lecture">
+      <a href="{{ url_for('lecture') }}">
+        <h3>Lecture</h3>
+      </a>
+    </div>
+    <div class="Lab">
+      <a href="{{ url_for('lab') }}">
+        <h3>Lab</h3>
+      </a>
+    </div>
+    <div class="Assignment">
+      <a href="{{ url_for('assignment') }}">
+        <h3>Assignment</h3>
+      </a>
+    </div>
+    <div class="Tests">
+      <a href="{{ url_for('tests') }}">
+        <h3>Tests</h3>
+      </a>
+    </div>
+    <div class="Calendar">
+      <a href="{{ url_for('calendar') }}">
+        <h3>Calendar</h3>
+      </a>
+    </div>
+    <div class="Discussion current-page">
+      <a href="{{ url_for('discussion') }}">
+        <h3>Discussion</h3>
+      </a>
+    </div>
+    <div class="Resources">
+      <a href="{{ url_for('resources') }}">
+        <h3>Resources</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <!-- Provide a link for Piazza -->
+    <div class="piazza">
+      <h2>Piazza</h2>
+      <a href="https://piazza.com/class/k5l8ww7kz8l6f0" target="_blank">
+        <h3>Here!</h3>
+      </a>
+    </div>
+
+    <!-- Students should be able to give anonymous Feedback to instructors and instructors should be able to see all feedbacks that they get -->
+    <div class="feedback">
+      <h2> Anonymous Feedback</h2>
+      <!-- This part should be shown to students only -->
+      <div class="student_only" hidden>
+        <div class="feedback content">
+          <!-- Feedback instruction -->
+          <p> If you have any concerns about lectures, labs or anything regarding this course, choose who you would
+            like
+            to leave this feedback for and answer the following questions.</p>
+          <p> <strong>Note</strong>: All feedback given will be anonymous</p>
+
+          <form action="/discussion" method="post" id="feedback_form">
+            <!-- Student should be able to choose an instructor -->
+            <div class="select">
+              <select name="instructor_choice" id="instructor_choice" required>
+                <option value="">Choose an instructor</option>
+                {% for instructor in instructors %}
+                <option id="instructor" name="instructor" value="{{ instructor.email }}">{{ instructor.fname }} {{
+                  instructor.lname}}</option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <!-- Create textboxes where student can write their anonymous feedback -->
+            <div class="questions">
+              <p>1.) What do you like about the instructor's teaching?</p>
+              <textarea id="q1" name="q1"></textarea>
+              <p>2.) What do you recommend the instructor to do to improve teaching?</p>
+              <textarea id="q2" name="q2"></textarea>
+              <p>3.) What do you like about the labs?</p>
+              <textarea id="q3" name="q3"></textarea>
+              <p>4.) What do you recommend the lab instructors to do to improve their lab teaching?</p>
+              <textarea id="q4" name="q4"></textarea>
+            </div>
+        </div>
+        <div class="feedbackButton">
+          <input type="submit" name="submit" value="Submit">
+        </div>
+        </form>
+      </div>
+    </div>
+
+    <br>
+    <!-- This part should be shown to instructors only -->
+    <div class="instructor_only" hidden>
+      <!-- Feedback result table (Q1, Q2, Q3 and Q4) -->
+      <div class="feedback-table">
+        <div class="request-table-first-row"><b>Q1. Likes about the instructor's way of teaching</b></div>
+        <div class="request-table-first-row"><b>Q2. Recommendations for instructor to improve teaching</b></div>
+        <div class="request-table-first-row"><b>Q3. Likes about the labs</b></div>
+        <div class="request-table-first-row"><b>Q4. Recommendations to lab instructor to improve lab teaching</b></div>
+        {% for feedback in all_feedback %}
+        <div><span>{{ feedback.Q1 }}</span></div>
+        <div><span>{{ feedback.Q2 }}</span></div>
+        <div><span>{{ feedback.Q3 }}</span></div>
+        <div><span>{{ feedback.Q4 }}</span></div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Students should be able to request remarking -->
+    <div class="remark-request">
+      <h2>Remark Request</h2>
+      <!-- This part should be shown to students only -->
+      <div class="student_only" hidden>
+        <p><a href="{{ url_for('studentRemark') }}"><strong>Click here</strong></a> to request for remark.</p>
+      </div>
+      <!-- This part should be shown to instructors only -->
+      <div class="instructor_only" hidden>
+        <p><a href="{{ url_for('instructorRemark') }}"><strong>Click here</strong></a> to see all remark requests.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Copyright information -->
+  <div class="footer">
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">
+      <h3>Faculty of Computer Science at UofT</h3>
+    </a>
+    <h4>Made by Jiyeon Baek and Anika Chang</h4>
+  </div>
+
+  <!-- Connect JavaScript to HTML -->
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts/submit_feedback.js') }}"></script>
+
+</body>
+
+</html>

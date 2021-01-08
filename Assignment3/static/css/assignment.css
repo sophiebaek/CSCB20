@@ -1,0 +1,31 @@
+/* Set the size of assignments table and divide it into four sections */
+div.assignments {
+  display: grid;
+  grid-template-columns: 10% 50% 20% 20%;
+  grid-auto-rows: minmax(50px, auto);
+  word-wrap: break-word;
+  width: 100%;
+}
+
+/* Design assignments table */
+div.assignments>div {
+  background: #eee;
+  padding: 1em;
+  border: 1px rgb(189, 187, 187) solid;
+  text-align: center;
+}
+
+/* Set the background color of the first column and the first row darker than the other */
+div.assignments>div.assignments-first-row-col {
+  background-color: rgb(219, 219, 219);
+}
+
+div.markus>h2 {
+  border-bottom: solid 1px;
+  color: rgb(110, 144, 202);
+}
+
+div.assignment-title>h2 {
+  border-bottom: solid 1px;
+  color: rgb(110, 144, 202);
+}

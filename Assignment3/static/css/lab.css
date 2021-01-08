@@ -1,0 +1,51 @@
+/* Set the size of the ta office hour table and divide it into three sections (Name 20 : Time 60 : Location 20) */
+div.ta-office-hours {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-auto-rows: 50px;
+    width: 70%;
+}
+
+/* Design the ta office hour table */
+div.ta-office-hours>div {
+    background: #eee;
+    padding: 1em;
+    border: 1px rgb(189, 187, 187) solid;
+    text-align: center;
+}
+
+/* Set the background color of the first column darker than the other */
+div.ta-office-hours>div.ta-name {
+    background-color: rgb(219, 219, 219);
+}
+
+/* Set the size of the tutorial schedule table and divide it into three sections (Week 20 : Tutorial materials 50 : Solution 30) */
+div.tutorial-exercises {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-auto-rows: minmax(50px, auto);
+    width: 100%;
+}
+
+/* Design the tutorial schedule table */
+div.tutorial-exercises>div {
+    background: #eee;
+    padding: 1em;
+    border: 1px rgb(189, 187, 187) solid;
+    text-align: center;
+}
+
+/* Set the background color of the first row darker than the other */
+div.tutorial-exercises>div.tutorial-exercises-first-row {
+    background-color: rgb(219, 219, 219);
+}
+
+div.ta-office-hour-title>h2 {
+    border-bottom: solid 1px;
+    color: rgb(110, 144, 202);
+}
+
+div.tutorial-exercises-title>h2 {
+    border-bottom: solid 1px;
+    color: rgb(110, 144, 202);
+}

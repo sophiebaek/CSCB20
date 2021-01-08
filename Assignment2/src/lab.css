@@ -1,0 +1,43 @@
+div.ta-office-hours {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-auto-rows: 50px;
+    width: 70%;
+}
+
+div.ta-office-hours>div {
+    background: #eee;
+    padding: 1em;
+    border: 1px rgb(189, 187, 187) solid;
+    text-align: center;
+}
+
+div.ta-office-hours>div.ta-name {
+    background-color: rgb(219, 219, 219);
+}
+
+div.tutorial-exercises {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+    grid-auto-rows: minmax(50px, auto);
+    width: 100%;
+}
+
+div.tutorial-exercises>div {
+    background: #eee;
+    padding: 1em;
+    border: 1px rgb(189, 187, 187) solid;
+    text-align: center;
+}
+
+div.tutorial-exercises>div.tutorial-exercises-first-row {
+    background-color: rgb(219, 219, 219);
+}
+
+div.ta-office-hour-title>h2 {
+    border-bottom: solid 1px;
+}
+
+div.tutorial-exercises-title>h2 {
+    border-bottom: solid 1px;
+}

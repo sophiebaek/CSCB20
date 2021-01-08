@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSCB20 - Log In</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="content-container.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+
+</head>
+
+<body>
+    <div class="Title">
+        <h1>CSCB20 Introduction to Databases and Web Applications</h1>
+        <h3>Winter 2020</h3>
+    </div>
+
+    <div class="content-container">
+        <div class="page-grid">
+            <div class="new-account">
+                <h2>Create a New Account</h2>
+                <!--<form action="">-->
+                <input type="radio" id="student" name="status" value="student">
+                <label for="student">Student</label>
+                <input type="radio" id="instructor" name="status" value="instructor">
+                <label for="female">Instructor</label><br><br>
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username"><br><br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" minlength="8"><br><br>
+                <hr><br>
+                <label for="fname"></label>
+                <input type="text" id="fname" name="fname" placeholder="First Name">
+                <label for="lname"></label>
+                <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+                <label for="student-number"></label>
+                <input type="text" id="student-number" name="student-number" placeholder="Student Number" pattern="[0-9]{10}"><br><br>
+                <label for="email"></label>
+                <input type="email" id="email" name="email" placeholder="Email Address"><br><br>
+                <input type="submit" value="Submit">
+                <!--</form>-->
+
+            </div>
+            <div class="log-in">
+                <h2>Log In</h2>
+                <!--<form action="">-->
+                <input type="radio" id="student" name="status" value="student">
+                <label for="student">Student</label>
+                <input type="radio" id="instructor" name="status" value="instructor">
+                <label for="female">Instructor</label><br><br>
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username"><br><br>
+                <label for="password"></label>
+                <input type="password" id="password" name="password" placeholder="Password" minlength="8"><br><br>
+                <input type="submit" value="Log In">
+                <!--</form>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">
+            <h3>Faculty of Computer Science at UofT</h3>
+        </a>
+        <h4>Made by Jiyeon Baek and Anika Chang</h4>
+    </div>
+</body>
+
+</html>

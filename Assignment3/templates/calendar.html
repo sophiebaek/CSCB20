@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSCB20 - Calendar</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Connect CSS to HTML -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/content-container.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/calendar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Define the website title -->
+  <div class="Title">
+    <h1>CSCB20 Introduction to Databases and Web Applications</h1>
+    <h3>Winter 2020</h3>
+  </div>
+
+  <!-- Create a navigation bar -->
+  <div class="nav-bar-container">
+    <div class="Home">
+      <a href="{{ url_for('index') }}">
+        <h3>Home</h3>
+      </a>
+    </div>
+    <div class="Announcement">
+      <a href="{{ url_for('announcement') }}">
+        <h3>Announcement</h3>
+      </a>
+    </div>
+    <div class="Lecture">
+      <a href="{{ url_for('lecture') }}">
+        <h3>Lecture</h3>
+      </a>
+    </div>
+    <div class="Lab">
+      <a href="{{ url_for('lab') }}">
+        <h3>Lab</h3>
+      </a>
+    </div>
+    <div class="Assignment">
+      <a href="{{ url_for('assignment') }}">
+        <h3>Assignment</h3>
+      </a>
+    </div>
+    <div class="Tests">
+      <a href="{{ url_for('tests') }}">
+        <h3>Tests</h3>
+      </a>
+    </div>
+    <div class="Calendar current-page">
+      <a href="{{ url_for('calendar') }}">
+        <h3>Calendar</h3>
+      </a>
+    </div>
+    <div class="Discussion">
+      <a href="{{ url_for('discussion') }}">
+        <h3>Discussion</h3>
+      </a>
+    </div>
+    <div class="Resources">
+      <a href="{{ url_for('resources') }}">
+        <h3>Resources</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <!-- A calendar containing course schedule -->
+    <div class="calendar-container">
+      <iframe class="calendar" src="https://calendar.google.com/calendar/embed?src=8f70jtc50d1ufib514e5025prs%40group.calendar.google.com&ctz=America%2FToronto"></iframe>
+    </div>
+  </div>
+
+  <!-- Copyright information -->
+  <div class="footer">
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">
+      <h3>Faculty of Computer Science at UofT</h3>
+    </a>
+    <h4>Made by Jiyeon Baek and Anika Chang</h4>
+  </div>
+</body>
+
+</html>

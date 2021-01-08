@@ -1,0 +1,24 @@
+div.remark-request-title>h2 {
+    border-bottom: solid 1px;
+  }
+
+/* Set the size of remark request table and divide it into three sections */
+div.request-table {
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-auto-rows: minmax(50px, auto);
+    width: 100%;
+}
+
+/* Design remark request table */
+div.request-table>div {
+    background: #eee;
+    padding: 1em;
+    border: 1px rgb(189, 187, 187) solid;
+    text-align: center;
+}
+
+/* Set the background color of the first row darker than the other */
+div.request-table>div.request-table-first-row {
+    background-color: rgb(219, 219, 219);
+}

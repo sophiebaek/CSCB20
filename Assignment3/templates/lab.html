@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSCB20 - Lab</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Connect CSS to HTML -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/content-container.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/lab.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Define the website title -->
+  <div class="Title">
+    <h1>CSCB20 Introduction to Databases and Web Applications</h1>
+    <h3>Winter 2020</h3>
+  </div>
+
+  <!-- Create a navigation bar -->
+  <div class="nav-bar-container">
+    <div class="Home">
+      <a href="{{ url_for('index') }}">
+        <h3>Home</h3>
+      </a>
+    </div>
+    <div class="Announcement">
+      <a href="{{ url_for('announcement') }}">
+        <h3>Announcement</h3>
+      </a>
+    </div>
+    <div class="Lecture">
+      <a href="{{ url_for('lecture') }}">
+        <h3>Lecture</h3>
+      </a>
+    </div>
+    <div class="Lab current-page">
+      <a href="{{ url_for('lab') }}">
+        <h3>Lab</h3>
+      </a>
+    </div>
+    <div class="Assignment">
+      <a href="{{ url_for('assignment') }}">
+        <h3>Assignment</h3>
+      </a>
+    </div>
+    <div class="Tests">
+      <a href="{{ url_for('tests') }}">
+        <h3>Tests</h3>
+      </a>
+    </div>
+    <div class="Calendar">
+      <a href="{{ url_for('calendar') }}">
+        <h3>Calendar</h3>
+      </a>
+    </div>
+    <div class="Discussion">
+      <a href="{{ url_for('discussion') }}">
+        <h3>Discussion</h3>
+      </a>
+    </div>
+    <div class="Resources">
+      <a href="{{ url_for('resources') }}">
+        <h3>Resources</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <!-- Display the ta office hour with a table (use grid) -->
+    <div class="ta-office-hour-title">
+      <h2>TA Office Hours</h2>
+    </div>
+
+    <!-- TA office hour table (TA name, time and location) -->
+    <div class="ta-office-hours">
+      <div class="ta-name"><b>Brian</b></div>
+      <div>Tuesday 9am to 11am</div>
+      <div>IC400A</div>
+      <div class="ta-name"><b>Vidya</b></div>
+      <div>Tuesday 2pm to 4pm</div>
+      <div>IC402</div>
+      <div class="ta-name"><b>Sakina</b></div>
+      <div>Tuesday 4pm to 5pm</div>
+      <div>IC402</div>
+      <div class="ta-name"><b>Dharmik</b></div>
+      <div>Thursday 10am to 12pm</div>
+      <div>IC402</div>
+      <div class="ta-name"><b>Fred</b></div>
+      <div>Thursday 12pm to 1pm</div>
+      <div>IC402</div>
+      <div class="ta-name"><b>Kevin</b></div>
+      <div>Friday 6pm to 8pm</div>
+      <div>IC400A</div>
+    </div>
+
+    <!-- Display the tutorial schedule with a table (use grid) -->
+    <div class="tutorial-exercises-title">
+      <h2>Tutorial Exercises</h2>
+    </div>
+
+    <!-- Tutorial schedule table (week, tutorial materials and solutions) -->
+    <div class="tutorial-exercises">
+      <div class="tutorial-exercises-first-row"><b>Week</b></div>
+      <div class="tutorial-exercises-first-row"><b>Tutorial Materials</b></div>
+      <div class="tutorial-exercises-first-row"><b>Solution</b></div>
+      <div>2</div>
+      <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>3</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>4</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>5</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>6</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>7</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>8</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>9</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+      <div>10</div>
+      <div>
+        <div><A HREF="./static/pdfs/relational.pdf" target="_blank">Handout.pdf</A></div>
+      </div>
+      <div><A HREF="./static/pdfs/tut4_soln.pdf" target="_blank">Solution.pdf</A></div>
+    </div>
+  </div>
+
+  <!-- Copyright information -->
+  <div class="footer">
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">
+      <h3>Faculty of Computer Science at UofT</h3>
+    </a>
+    <h4>Made by Jiyeon Baek and Anika Chang</h4>
+  </div>
+</body>
+
+</html>

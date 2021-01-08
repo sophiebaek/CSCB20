@@ -1,0 +1,27 @@
+/* Student Number should be located in the same line with its title */
+h2, p{
+    display: inline;
+}
+
+/* Set the size of the grade table and divide it into two sections (Coursework 70% : Distrubution 30) */
+div.mark-table {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: minmax(50px, auto);
+    word-wrap: break-word;
+    width: 50%;
+    /* border: 1px rgb(189, 187, 187) solid; */
+}
+
+/* Design the grade table */
+div.mark-table>div {
+    background: #eee;
+    padding: 1em;
+    border: 1px rgb(189, 187, 187) solid;
+    text-align: center;
+}
+
+/* Set the background color of the first column darker than the other */
+div.mark-table>div.mark-table-first-col {
+    background-color: rgb(219, 219, 219);
+}

@@ -1,0 +1,1 @@
+As a student user, when the student clicks in Discussion and “Here!” it should lead them to Piazza website on a new tab.

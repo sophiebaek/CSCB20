@@ -1,0 +1,1 @@
+As a student user, when the student clicks the home page should see professor's information, course description, grading scheme table and link to the syllabus.

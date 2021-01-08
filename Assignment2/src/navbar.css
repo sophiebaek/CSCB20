@@ -1,0 +1,73 @@
+div.nav-bar-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+}
+
+div.nav-bar-container>div {
+  border: 1px #ccc solid;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  div.nav-bar-container>div {
+    flex-basis: 25vw;
+  }
+}
+
+div.Home {
+  flex: 1;
+}
+
+div.Announcement {
+  flex: 1;
+}
+
+div.Lecture {
+  flex: 1;
+}
+
+div.Lab {
+  flex: 1;
+}
+
+div.Assignment {
+  flex: 1;
+}
+
+div.Tests {
+  flex: 1;
+}
+
+div.Calendar {
+  flex: 1;
+}
+
+div.Discussion {
+  flex: 1;
+}
+
+div.nav-bar-container {
+  background-color: rgb(155, 176, 207);
+}
+
+div.Resources {
+  flex: 1;
+}
+
+div.nav-bar-container a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+}
+
+div.nav-bar-container>div>a:hover {
+  background-color: rgb(105, 126, 157);
+}
+
+div.current-page {
+  background-color: rgb(105, 126, 157);
+}

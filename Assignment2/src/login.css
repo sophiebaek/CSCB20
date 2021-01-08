@@ -1,0 +1,18 @@
+div.page-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+div.page-grid>div.new-account{
+    border-right: solid #4D648D 1px;
+}
+
+div.page-grid>div.log-in{
+    padding-left: 10vw;
+}
+
+hr{
+    border-top: solid #4D648D 1px;
+    width: 95%;
+    margin-left: 0;
+}

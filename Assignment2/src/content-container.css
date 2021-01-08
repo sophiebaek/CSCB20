@@ -1,0 +1,11 @@
+div.content-container {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+  border: 1px #ccc solid;
+}
+
+div.content-container {
+  background-color: rgb(255, 255, 235);
+}

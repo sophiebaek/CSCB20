@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSCB20 - Marks</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Connect CSS to HTML -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/content-container.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/marks-for-instructors.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+
+  <script type = "text/javascript"
+  src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+  </script>
+</head>
+
+<body>
+  <!-- Define the website title -->
+  <div class="Title">
+    <h1>CSCB20 Introduction to Databases and Web Applications</h1>
+    <h3>Winter 2020</h3>
+  </div>
+
+  <!-- Create a navigation bar -->
+  <div class="nav-bar-container">
+    <div class="Home">
+      <a href="{{ url_for('index') }}">
+        <h3>Home</h3>
+      </a>
+    </div>
+    <div class="Announcement">
+      <a href="{{ url_for('announcement') }}">
+        <h3>Announcement</h3>
+      </a>
+    </div>
+    <div class="Lecture">
+      <a href="{{ url_for('lecture') }}">
+        <h3>Lecture</h3>
+      </a>
+    </div>
+    <div class="Lab">
+      <a href="{{ url_for('lab') }}">
+        <h3>Lab</h3>
+      </a>
+    </div>
+    <div class="Assignment">
+      <a href="{{ url_for('assignment') }}">
+        <h3>Assignment</h3>
+      </a>
+    </div>
+    <div class="Tests">
+      <a href="{{ url_for('tests') }}">
+        <h3>Tests</h3>
+      </a>
+    </div>
+    <div class="Calendar">
+      <a href="{{ url_for('calendar') }}">
+        <h3>Calendar</h3>
+      </a>
+    </div>
+    <div class="Discussion">
+      <a href="{{ url_for('discussion') }}">
+        <h3>Discussion</h3>
+      </a>
+    </div>
+    <div class="Resources">
+      <a href="{{ url_for('resources') }}">
+        <h3>Resources</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class="student-marks-title">
+      <h2>Student Marks</h2>
+    </div>
+    <span>Click on mark to edit</span>
+    <br>
+    <br>
+    <form action="/marksforinstructors" method="post" id="submit_marks_form">
+      <input type="submit" id="submit_marks_btn" value="Submit Marks" disabled/>
+      <br>
+      <br>
+
+      <!-- Show grades of all students with a table (use grid) -->
+      <div class="mark-table">
+        <div class="mark-table-first-row"><b>First Name</b></div>
+        <div class="mark-table-first-row"><b>Last Name</b></div>
+        <div class="mark-table-first-row"><b>Student Number</b></div>
+        <div class="mark-table-first-row"><b>Assignment1<br>/100<br>(6%)</b></div>
+        <div class="mark-table-first-row"><b>Assignment2<br>/100<br>(8%)</b></div>
+        <div class="mark-table-first-row"><b>Assignment3<br>/100<br>(10%)</b></div>
+        <div class="mark-table-first-row"><b>Practical<br>/11<br>(4%)</b></div>
+        <div class="mark-table-first-row"><b>Midterm<br>/47.25<br>(24%)</b></div>
+        <div class="mark-table-first-row"><b>Final Exam<br>/100<br>(46%)</b></div>
+        {% for student in student_marks %}
+        <div>
+          <input type="text" name="fname" value="{{ student.fname }}" hidden>
+          <span>{{ student.fname }}</span>
+        </div>
+        <div>
+          <input type="text" name="lname" value="{{ student.lname }}" hidden>
+          <span>{{ student.lname }}</span>
+        </div>
+        <div>
+          <input type="text" name="student_no" value="{{ student.student_no }}" hidden>
+          <span>{{ student.student_no }}</span>
+        </div>
+        <div class="mark">
+          <input type="text" title="Numbers only" name="A1" value="{{ "%.2f"|format(student.A1) }}" pattern="^[0-9]\d{0,}(\.\d{1,})?%?$">
+        </div>
+        <div class="mark">
+          <input type="text" title="Numbers only" name="A2" value="{{ "%.2f"|format(student.A2) }}" pattern="^[0-9]\d{0,}(\.\d{1,})?%?$">
+        </div>
+        <div class="mark">
+          <input type="text" title="Numbers only" name="A3" value="{{ "%.2f"|format(student.A3) }}" pattern="^[0-9]\d{0,}(\.\d{1,})?%?$">
+        </div>
+        <div class="mark">
+          <input type="text" title="Numbers only" name="lab" value="{{ "%.2f"|format(student.lab) }}" pattern="^[0-9]\d{0,}(\.\d{1,})?%?$">
+        </div>
+        <div class="mark">
+          <input type="text" title="Numbers only" name="midterm" value="{{ "%.2f"|format(student.midterm) }}" pattern="^[0-9]\d{0,}(\.\d{1,})?%?$">
+        </div>
+        <div class="mark">
+          <input type="text" title="Numbers only" name="final" value="{{ "%.2f"|format(student.final) }}" pattern="^[0-9]\d{0,}(\.\d{1,})?%?$">
+        </div>
+        {% endfor %}
+      </div>
+    </form>
+  </div>
+
+  <!-- copyright information -->
+  <div class="footer">
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">
+      <h3>Faculty of Computer Science at UofT</h3>
+    </a>
+    <h4>Made by Jiyeon Baek and Anika Chang</h4>
+  </div>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='scripts/submit_new_marks.js') }}"></script>
+
+</body>
+
+</html>

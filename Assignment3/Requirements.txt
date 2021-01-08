@@ -1,0 +1,5 @@
+Flask
+To install: pip install flask
+
+Sqlite3 (Python3 built-in)
+Json (Python3 build-in)

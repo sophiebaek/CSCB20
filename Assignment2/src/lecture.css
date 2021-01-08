@@ -1,0 +1,18 @@
+div.lecture-table {
+  display: grid;
+  grid-template-columns: 10% 50% 20% 20%;
+  grid-auto-rows: minmax(50px, auto);
+  word-wrap: break-word;
+  width: 100%;
+}
+
+div.lecture-table>div {
+  background: #eee;
+  padding: 1em;
+  border: 1px rgb(189, 187, 187) solid;
+  text-align: center;
+}
+
+div.lecture-table>div.lecture-table-first-row {
+  background-color: rgb(219, 219, 219);
+}

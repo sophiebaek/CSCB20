@@ -1,0 +1,1 @@
+As a student user, when I click on Labs the student should get a table of TA’s names with time and location of labs and content used/learned in lab.

@@ -1,0 +1,1 @@
+As a student user, the student should see a table of lecture material organized by week in the lecture page.

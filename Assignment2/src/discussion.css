@@ -1,0 +1,12 @@
+div.piazza>h2 {
+  border-bottom: solid 1px;
+}
+
+div.feedback>h2 {
+  border-bottom: solid 1px;
+}
+
+textarea {
+  width: 50%;
+  height: 10vw;
+}

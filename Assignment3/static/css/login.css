@@ -1,0 +1,29 @@
+/* Divide the login page into two sections (New account 50 : Login50) */
+div.page-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+/* A vertical division line between two sections */
+div.page-grid>div.new-account{
+    border-right: solid #4D648D 1px;
+}
+
+div.page-grid>div.log-in{
+    padding-left: 10vw;
+}
+
+/* A horizontal division line above changeable textbox */
+hr{
+    border-top: solid #4D648D 1px;
+    width: 95%;
+    margin-left: 0;
+}
+
+div.new-account>h2 {
+    color: rgb(110, 144, 202);
+}
+
+div.log-in>h2 {
+    color: rgb(110, 144, 202);
+}

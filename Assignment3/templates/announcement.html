@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSCB20 – Announcements</title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Connect CSS to HTML -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/header.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/content-container.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/announcement.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/footer.css') }}">
+  <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+</head>
+
+<body>
+  <!-- Define the website title -->
+  <div class="Title">
+    <h1>CSCB20 Introduction to Databases and Web Applications</h1>
+    <h3>Winter 2020</h3>
+  </div>
+
+  <!-- Create a navigation bar -->
+  <div class="nav-bar-container">
+    <div class="Home">
+      <a href="{{ url_for('index') }}">
+        <h3>Home</h3>
+      </a>
+    </div>
+    <div class="Announcement current-page">
+      <a href="{{ url_for('announcement') }}">
+        <h3>Announcement</h3>
+      </a>
+    </div>
+    <div class="Lecture">
+      <a href="{{ url_for('lecture') }}">
+        <h3>Lecture</h3>
+      </a>
+    </div>
+    <div class="Lab">
+      <a href="{{ url_for('lab') }}">
+        <h3>Lab</h3>
+      </a>
+    </div>
+    <div class="Assignment">
+      <a href="{{ url_for('assignment') }}">
+        <h3>Assignment</h3>
+      </a>
+    </div>
+    <div class="Tests">
+      <a href="{{ url_for('tests') }}">
+        <h3>Tests</h3>
+      </a>
+    </div>
+    <div class="Calendar">
+      <a href="{{ url_for('calendar') }}">
+        <h3>Calendar</h3>
+      </a>
+    </div>
+    <div class="Discussion">
+      <a href="{{ url_for('discussion') }}">
+        <h3>Discussion</h3>
+      </a>
+    </div>
+    <div class="Resources">
+      <a href="{{ url_for('resources') }}">
+        <h3>Resources</h3>
+      </a>
+    </div>
+  </div>
+
+  <div class="content-container">
+    <div class=" announcement">
+      <h2> Announcements (Most recent at the top)</h2>
+      <!-- Display announcements (newest -> oldest) -->
+      <div class="announcementinfo">
+        <ul>
+          <li><strong>Mar 2, 2020 at 11:42 am</strong>: Assignment 2 is now available. Please make sure that you create your groups on Markus and have your partner invited in it by 9th March.</li>
+          <li><strong>Feb 15, 2020 at 8:26 pm</strong>: As you may have noticed, your marks for your B20 Assignment 1 have been posted on Quercus.</li>
+          <li><strong>Feb 6, 2020 at 6:46 pm</strong>: Your B20 exam study guide is posted. Your exam is scheduled 10th February in HL 170 from 9am to 11am.</li>
+          <li><strong>Jan 26, 2020 at 10:14 am</strong>: I will encourage you to read up the tutorial material for the week of 27th January before coming to the lecture tomorrow.</li>
+          <li><strong>Jan 22, 2020 at 3:02 pm</strong>: Assignment 1 is now available. Due date is 7th February @ 11:59pm.</li>
+          <li><strong>Jan 19, 2020 at 12:13 pm</strong>: <a href=http://piazza.com/mail.utoronto.ca/spring2020/cscb20>Piazza</a> for this class is available here.</li>
+          <li><strong>Jan 19, 2020 at 12:13 pm</strong>: Course website on Quercus now available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright information -->
+  <div class="footer">
+    <a href="https://www.utsc.utoronto.ca/cms/faculty-of-computer-science" target="_blank">
+      <h3>Faculty of Computer Science at UofT</h3>
+    </a>
+    <h4>Made by Jiyeon Baek and Anika Chang</h4>
+  </div>
+
+</body>
+
+</html>

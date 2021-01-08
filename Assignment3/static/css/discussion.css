@@ -1,0 +1,42 @@
+div.piazza>h2 {
+  border-bottom: solid 1px;
+  color: rgb(110, 144, 202);
+}
+
+div.feedback>h2 {
+  border-bottom: solid 1px;
+  color: rgb(110, 144, 202);
+}
+
+div.remark-request>h2 {
+  border-bottom: solid 1px;
+  color: rgb(110, 144, 202);
+}
+
+textarea {
+  width: 50%;
+  height: 10vw;
+}
+
+/* Set the size of the feedback result table and divide it into four sections */
+div.feedback-table {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-auto-rows: minmax(50px, auto);
+  width: 100%;
+}
+
+/* Design the feedback result table */
+div.feedback-table>div {
+  background: #eee;
+  padding: 1em;
+  border: 1px rgb(189, 187, 187) solid;
+  text-align: center;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Set the background color of the first row darker than the other */
+div.feedback-table>div.request-table-first-row {
+  background-color: rgb(219, 219, 219);
+}
